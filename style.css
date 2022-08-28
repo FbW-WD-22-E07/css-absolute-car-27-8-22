@@ -5,6 +5,7 @@
 }
 
 :root {
+    /* you can change this to your likness */
     --car-width: 400px;
 }
 header {
@@ -13,50 +14,55 @@ header {
 }
 #city-container {
     /* 
-        parent should be positioned
-        (relative in this case)
-        so absolute elements could move
-        relative to it
-     */
-    position: relative;
+        you need to add a property here
+        so children could move relative to parent
+        what is it?
+    */
+
     width: 100%;
     height: 100%;
-    background-image: url("city.avif");
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    transition: background-image 2s;
+    /* add background properties to give background image */
+
+    /*
+        add a transition: if you want to 
+        change background-image on hover
+    */
 }
 /* 
     both road-img and car-img
-    need to be absolute so they
+    need a property to
     move relative to their parent
+    what is it?
 */
 #road-img {
-    position: absolute;
-    bottom: 0;
     height: 15vh;
     width: 100%;
 }
 #car-img {
-    position: absolute;
-    bottom: 10px;
-    right: 0;
     width: var(--car-width);
-    transition: right 2s ease-in-out;
+    /* 
+        add transition with ease-in-out
+        for car movement
+    */
 }
 
 /* make the car move when road or car hovered */
 #road-img:hover + #car-img,
 #car-img:hover {
     /*
-        care move 100% parent width minus
-        car's width so it stays in view 
+        care should move 100% of parent width
+        minus car's width so it stays in view
+        do not use transform!!! this is about positioning!
     */
-    right: calc(100% - var(--car-width));
 }
 
-/* change background when city container hovered */
+/* 
+    if you want change background when
+    city container hovered 
+*/
 #city-container:hover {
-    background-image: url("city-night.jpg");
+    /* 
+        you only need to change the image 
+        url not its size or position
+    */
 }
