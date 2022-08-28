@@ -21,7 +21,7 @@ header {
     position: relative;
     width: 100%;
     height: 100%;
-    background-image: url("city.avif");
+    background-image: url("images/city.avif");
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -58,5 +58,5 @@ header {
 
 /* change background when city container hovered */
 #city-container:hover {
-    background-image: url("city-night.jpg");
+    background-image: url("images/city-night.jpg");
 }
