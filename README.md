@@ -8,4 +8,4 @@
 - add hover effect to change city background image
 - Bonus: you can use this as a part in a car dealer website !!
 
-![screenshot](screenshot.gif)
+![screenshot](images/screenshot.gif)
